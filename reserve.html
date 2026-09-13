@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.reserveTitle">Web予約｜SENS Private salon</title>
+  <meta name="description" data-i18n="meta.reserveDesc" content="SENS Private salonのご予約。ホットペッパー、LINE、お電話（090-6755-6727）からご予約ください。英語でのご予約も可能です。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-reserve">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">SENS Private salon<span>HIBARIGAOKA / NISHI-TOKYO</span></a>
+      <button class="menu-toggle" type="button" aria-label="メニュー" data-i18n="nav.menu" data-i18n-attr="aria-label" aria-expanded="false"><span></span></button>
+      <nav aria-label="メインメニュー" data-i18n="nav.label" data-i18n-attr="aria-label">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
+          <li><a href="body.html">BODY</a></li>
+          <li><a href="head.html" data-i18n="nav.head">ドライヘッド</a></li>
+          <li><a href="facial.html" data-i18n="nav.facial">フェイシャル</a></li>
+          <li><a href="attention.html" data-i18n="nav.notes">注意事項</a></li>
+          <li><a href="profile.html" data-i18n="nav.profile">プロフィール</a></li>
+          <li><a href="contact.html" data-i18n="nav.access">アクセス</a></li>
+          <li class="nav-reserve"><a href="reserve.html" aria-current="page" data-i18n="nav.book">Web予約</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="ja">JP</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+        <a class="btn btn-solid header-cta" href="#reserve-form" data-i18n="nav.book">Web予約</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="eyebrow">Reservation</p>
+      <h1 data-i18n="rs.title">Web予約</h1>
+      <p class="section-lead" data-i18n="rs.lead">ご予約はホットペッパー、LINE、お電話からお願いします。英語でのご予約も可能です。1日3名様までの完全予約制です。</p>
+    </header>
+
+    <section class="section" style="padding-top:32px;">
+      <div class="contact-grid">
+        <article class="info-card" id="hp">
+          <h2 data-i18n="rs.hp.title">ホットペッパーで予約</h2>
+          <p data-i18n="rs.hp.body">空き状況の確認と予約は、ホットペッパービューティーから行えます。</p>
+          <div class="cta-row" style="margin-top:20px;">
+            <a class="btn btn-solid" href="https://beauty.hotpepper.jp/kr/slnH000759640/" target="_blank" rel="noopener" data-i18n="rs.hp.cta">ホットペッパーで予約する</a>
+          </div>
+        </article>
+        <div>
+          <article class="info-card" style="margin-bottom:16px;">
+            <h2 data-i18n="rs.line.title">LINEでも予約できます</h2>
+            <p data-i18n="rs.line.body">ホットペッパーが使いにくい場合は、LINEから希望日時とメニューをお送りください。英語でもご連絡いただけます。</p>
+            <a class="btn btn-line" href="https://line.me/ti/p/ejsU3zgqSk" target="_blank" rel="noopener" data-i18n="nav.lineNow">LINEで予約する</a>
+          </article>
+          <article class="info-card" style="margin-bottom:16px;">
+            <h2 data-i18n="rs.phone.title">電話でも予約できます</h2>
+            <p data-i18n="rs.phone.body">090-6755-6727 までお電話ください。営業・勧誘のご連絡はお断りしています。</p>
+            <a class="btn btn-ghost" href="tel:09067556727" data-i18n="nav.call">電話する</a>
+          </article>
+          <article class="info-card">
+            <h2 data-i18n="rs.before">ご予約の前に</h2>
+            <ul>
+              <li data-i18n="rs.b1">営業時間：10:00–21:00（不定休）</li>
+              <li data-i18n="rs.b2">電話：090-6755-6727</li>
+              <li data-i18n="rs.b3">営業・勧誘のご連絡はお断りしています</li>
+              <li data-i18n="rs.b4">持病・妊娠中・手術直後の方は注意事項をご確認ください</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <article class="info-card reserve-form-card" id="reserve-form" style="margin-top:28px;">
+        <form class="reserve-form" id="reserve-form-el">
+          <h2 data-i18n="rs.form.title">予約リクエスト</h2>
+          <p class="note" data-i18n="rs.form.lead">メールアプリが開きます。送信後、折り返しご連絡します。すぐ予約したい方はホットペッパーをご利用ください。</p>
+          <label>
+            <span data-i18n="rs.f.name">お名前</span>
+            <input name="お名前" type="text" required autocomplete="name">
+          </label>
+          <label>
+            <span data-i18n="rs.f.email">メールアドレス</span>
+            <input name="メール" type="email" required autocomplete="email">
+          </label>
+          <label>
+            <span data-i18n="rs.f.tel">電話番号（任意）</span>
+            <input name="電話" type="tel" autocomplete="tel" placeholder="090-6755-6727">
+          </label>
+          <label>
+            <span data-i18n="rs.f.menu">ご希望メニュー</span>
+            <select name="メニュー" required>
+              <option value="" data-i18n="rs.f.choose">選択してください</option>
+              <option value="強圧リンパ（ボディ）" data-i18n="rs.f.m.body">強圧リンパ（ボディ）</option>
+              <option value="ドライヘッド" data-i18n="rs.f.m.head">ドライヘッド</option>
+              <option value="フェイシャル" data-i18n="rs.f.m.facial">フェイシャル</option>
+              <option value="その他・相談" data-i18n="rs.f.m.other">その他・相談</option>
+            </select>
+          </label>
+          <div class="form-row">
+            <label>
+              <span data-i18n="rs.f.d1">第一希望日</span>
+              <input name="第一希望日" type="date" required>
+            </label>
+            <label>
+              <span data-i18n="rs.f.t1">第一希望時間</span>
+              <select name="第一希望時間" class="time-slot" required>
+                <option value="" data-i18n="rs.f.choose">選択してください</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span data-i18n="rs.f.d2">第二希望日（任意）</span>
+              <input name="第二希望日" type="date">
+            </label>
+            <label>
+              <span data-i18n="rs.f.t2">第二希望時間（任意）</span>
+              <select name="第二希望時間" class="time-slot">
+                <option value="" data-i18n="rs.f.choose">選択してください</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span data-i18n="rs.f.note">ご相談・ご要望（任意）</span>
+            <textarea name="ご相談" rows="4"></textarea>
+          </label>
+          <button class="btn btn-solid" type="submit" data-i18n="rs.f.submit">予約リクエストを送る</button>
+        </form>
+        <p class="form-done" hidden data-i18n="rs.form.done">メール作成画面を開きました。送信できない場合は LINE かお電話でご連絡ください。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>SENS Private salon</strong>
+        <p>〒202-0002 東京都西東京市ひばりが丘北4-8-24 303</p>
+        <p><a href="tel:09067556727">090-6755-6727</a></p>
+        <p><a href="mailto:sens.privatesalon@gmail.com">sens.privatesalon@gmail.com</a></p>
+      </div>
+      <small>© SENS Private salon</small>
+    </div>
+  </footer>
+  <a class="btn btn-solid mobile-line" href="#hp" data-i18n="nav.book">Web予約</a>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
